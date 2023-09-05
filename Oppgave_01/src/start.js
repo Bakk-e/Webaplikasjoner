@@ -6,8 +6,19 @@ const text =
 
 const longestWord = () => {
   // TODO: Gjør om text til array eks. ['Baby', 'cliche']
+  const textList = text.split(" ")
+
   // TODO: Velg første ord så du har noe å sammenlikne med
+  let word = textList[0];
+
   // TODO: Gå igjennom alle ordene og oppdater hvis nytt ord er lengre
+  textList.forEach(element => {
+    if (word.length < element.length) {
+      word = element;
+    }
+  })
+
+  return(word)
 };
 
 console.log(longestWord());
